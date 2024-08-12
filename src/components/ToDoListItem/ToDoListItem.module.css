@@ -1,0 +1,50 @@
+.toDoItem {
+  max-width: 250px;
+  width: 100%;
+  padding: 1rem;
+  margin: 0.2rem 0.5rem;
+  box-shadow: 0 0 5px grey;
+  transition: transform 0.2s ease-in-out;
+  background-color: lightslategray;
+  position: relative;
+}
+.toDoItem:hover {
+  transform: scale(1.05);
+}
+
+.starBtn {
+  position: absolute;
+  top: 2px;
+  right: 2.5px;
+  color: black;
+  transition: 0.2s ease-in-out;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+}
+.checkBtn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: black;
+  transition: 0.2s ease-in-out;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+}
+
+.checkBtnActive {
+  color: lightgreen;
+}
+
+.checkBtn:hover {
+  color: lightgreen;
+}
+
+.starBtnActive {
+  color: yellow;
+}
+
+.starBtn:hover {
+  color: yellow;
+}
