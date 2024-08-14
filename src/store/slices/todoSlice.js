@@ -18,7 +18,7 @@ const initialState = {
 
 const toDoSlice = createSlice({
   initialState,
-  name: 'ToDo',
+  name: 'toDo',
   reducers: {
     removeToDo: (state, { payload }) => {
       const foundToDoIndex = state.toDo.findIndex(t => t.id === payload)
@@ -31,11 +31,14 @@ const toDoSlice = createSlice({
       if (foundFavourite) {
         foundFavourite.isFavourite = !foundFavourite.isFavourite
       }
+    },
+    createTodo: (state, { payload }) => {
+      state.toDo.push({ value: payload.toDo, id: uuidv4(), isFavourite: false })
     }
   }
 })
 
 const { reducer, actions } = toDoSlice
 
-export const { removeToDo, toggleFavourite } = actions
+export const { removeToDo, toggleFavourite, createTodo } = actions
 export default reducer
