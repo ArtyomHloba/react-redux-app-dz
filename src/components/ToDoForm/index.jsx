@@ -2,6 +2,7 @@ import { ErrorMessage, Field, Form, Formik } from 'formik'
 import { connect } from 'react-redux'
 import { TODO_VALIDATION_SCHEMA } from '../../utils/validationsSchemas.js'
 import { createTodo } from '../../store/slices/todoSlice.js'
+import styles from './ToDoForm.module.css'
 function ToDoForm ({ create }) {
   const initialValues = {
     toDo: ''
@@ -12,8 +13,7 @@ function ToDoForm ({ create }) {
   }
 
   return (
-    <section>
-      <h2>New Todo</h2>
+    <section className={styles.formContainer}>
       <Formik
         initialValues={initialValues}
         onSubmit={submitHandler}
@@ -21,11 +21,23 @@ function ToDoForm ({ create }) {
       >
         <Form>
           <label>
-            <span>Whrite your Todo</span>
-            <Field type='text' name='toDo' placeholder='new Todo' autoFocus />
-            <ErrorMessage name='toDo' component='span' />
+            <span>New Todo: </span>
+            <Field
+              type='text'
+              name='toDo'
+              placeholder='new Todo'
+              autoFocus
+              className={styles.input}
+            />
+            <ErrorMessage
+              name='toDo'
+              component='div'
+              className={styles.error}
+            />
           </label>
-          <button type='submit'>Add</button>
+          <button className={styles.submitBtn} type='submit'>
+            Add
+          </button>
         </Form>
       </Formik>
     </section>

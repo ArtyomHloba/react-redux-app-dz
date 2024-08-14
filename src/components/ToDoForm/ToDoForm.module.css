@@ -1,4 +1,37 @@
-span {
+.formContainer {
+  max-width: 400px;
+  width: 100%;
+  padding: 1.5rem;
+  margin: 0.2rem 0.5rem;
+  box-shadow: 0 0 5px grey;
+  background-color: lightslategray;
+  border: 2px solid black;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.error {
+  font-size: 16px;
+  position: absolute;
+  top: 55px;
+  left: 25px;
   color: red;
-  font-size: 20px;
+}
+
+.input {
+  padding: 5px;
+}
+.submitBtn {
+  margin-left: 10px;
+  padding: 5px 15px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  background-color: lightslategray;
+  box-shadow: 0 0 5px white;
 }

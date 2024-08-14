@@ -6,6 +6,7 @@
   box-shadow: 0 0 5px grey;
   transition: transform 0.2s ease-in-out;
   background-color: lightslategray;
+  border-radius: 10px;
   position: relative;
 }
 .toDoItem:hover {

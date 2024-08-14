@@ -8,7 +8,6 @@ function ToDoList ({ toDo, remove, toggle }) {
   )
   return (
     <section>
-      <h2>ToDoList</h2>
       <ul>{toDo.map(mapToDoList)}</ul>
     </section>
   )
